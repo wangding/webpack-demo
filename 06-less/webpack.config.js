@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -13,17 +12,12 @@ module.exports = {
   mode: 'none',
   module: {
     rules: [{
-      test: /\.css$/,
+      test: /\.less$/,
       use: [
         MiniCssExtractPlugin.loader,
-        'css-loader'
-      ]},{
-      test: /\.(png|svg|jpg|gif)$/,
-      loader: 'url-loader',
-      options: {
-        limit: 1024,
-        name: 'images/[hash].[ext]'
-      }
+        'css-loader',
+        'less-loader'
+      ]  
     }]
   },
   plugins: [
@@ -31,6 +25,5 @@ module.exports = {
       title: 'hello webpack',
       inject: 'body'
     }),
-    new MiniCssExtractPlugin()
-  ]
+    new MiniCssExtractPlugin()]
 };

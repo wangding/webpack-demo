@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server",
+    "clean": "rm -rf ./dist"
+  },
+  "devDependencies": {
+    "less-loader": "^10.2.0"
+  }
+}
