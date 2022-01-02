@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server",
+    "clean": "rm -rf ./dist"
+  }
+}
